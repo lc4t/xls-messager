@@ -25,6 +25,4 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^asyncmailer/', include('asyncmailer.urls')),
     url(r'^index$', views.index),
-    url(r'^login$', views.Login),
-    url(r'^send$', views.Send),
 ]
