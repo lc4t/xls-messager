@@ -14,15 +14,7 @@ def index(request):
 
 
     # return HttpResponse('this is default page')
-from django.contrib.auth import authenticate, login
-def Login(request):
-    username = 'test'
-    password = 'WaNgHe0427'
-    user = authenticate(username=username, password=password)
-    if user.is_authenticated():# had login
-        login(request, user)
-        return HttpResponse('you are:' + str(user.username))
-    return HttpResponse('failed')
+from django.contrib.auth import authenticate
 
 from asyncmailer.tasks import async_mail
 def Send(request):
